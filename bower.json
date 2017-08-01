@@ -1,0 +1,27 @@
+{
+  "name": "angular_dragdrop_tree",
+  "authors": [
+    "wumeng <mengwu19910710@163.com>"
+  ],
+  "description": "angular drag and drop tree",
+  "main": "index.html",
+  "keywords": [
+    "drag",
+    "drop",
+    "tree"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "angular": "v1.5.7"
+  }
+}

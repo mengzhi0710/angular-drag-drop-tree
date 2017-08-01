@@ -1,0 +1,346 @@
+.dustbin{
+	width: 200px; 
+	height: 100%; 
+	line-height: 1.4;
+	font-family:"微软雅黑", "Yahei Mono"; 
+	text-align: center;
+	float: left;
+	padding-top: 5px;
+}
+.dragbox{
+    width: 200px;
+    float: left;
+    padding-left: 0px;
+    overflow-y: auto;
+    height: 94%;
+}
+.dragbox .draglist{
+	margin-bottom:3px; 
+	background-color:#eee; 
+	cursor:move;
+	height: 38px;
+	border-radius: 2px;
+	line-height: 38px;
+	padding-left: 22px;
+	vertical-align: top;
+	position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.draglist h4 {
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+    line-height: 34px;
+}
+.defineview .middlecontent  .key-nav .dragbox .draglist span {
+	position: absolute;
+    right: 5px;
+    display: none;
+}
+.dust-content .dustbin div{
+	display: inline-block;
+}
+.dust-content .dustbin img{
+	display: inline-block;
+	width: 157px;
+    height: 53px;
+    vertical-align: middle;
+}
+.dust-content .dustbin1 div{
+	display: inline-block;
+}
+.dust-content .dustbin2 div{
+	display: inline-block;
+}
+.box:first-child >.iconlist {
+    display: inline-block;
+	position: relative;
+	width: 143px;
+	height: 35px;
+	text-align: center;
+	vertical-align: top;
+    margin-top: 5px;
+}
+.box:first-child >.iconlist span {
+	display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 30px;
+    color: rgb(140,158,255);
+    background: #ffffff;
+    z-index: 9;
+    font-weight: bold;
+    font-size: 22px;
+    outline: none;
+}
+.box:first-child >.iconlist .error {
+    border: 1px dashed red;
+}
+.box:first-child >.iconlist span:before {
+    position: absolute;
+    z-index: 200;
+    top: -32px;
+    left: 31px;
+    width: 3px;
+    height: 47px;
+    background: #fff;
+    content: "";
+}
+.box:first-child >.iconlist span:after {
+	position: absolute;
+    top: 15px;
+    width: 142px;
+    border-top: 1px solid #dedede;
+    content: " ";
+    left: 0px;
+    z-index: -1;
+}
+.box +.box >.iconlist {
+	position: relative;
+	width: 143px;
+	/* z-index:1; */
+	vertical-align: top;
+    text-align: center;
+    display: inline-block;
+}
+.box +.box >.iconlist span{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid gray;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 30px;
+	color: #00d0ff;
+	background: #ffffff;
+	z-index:9;
+	color: rgb(140,158,255);
+	font-size: 22px;
+	font-weight: bold;
+}
+.box +.box >.iconlist .error {
+    border: 1px dashed red;
+}
+.box +.box >.iconlist span:before {
+	position: absolute;
+    left: 31px;
+    /* top: -20px;*/
+    top: -1000px;
+    bottom: 24px;
+    border-left: 1px solid #dedede;
+    content: "";
+    z-index: -1;
+}
+.box +.box >.iconlist span:after {
+	position: absolute;
+    top: 6px;
+    left: 31px;
+    width: 111px;
+    height: 10px;
+    border: 1px solid #dedede;
+    border-width: 0 0 1px 1px;
+    content: "";
+    z-index: -1;
+    border-bottom-left-radius: 5px;
+}
+.config-input {
+	margin-left: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+.dust-content {
+    width: 80%;
+    height: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    position: relative;
+    z-index: 0;
+}
+
+.dust-content p {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+
+/*-------补上的内容*/
+.dust-content .box {
+    display: block;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+
+.dust-content .box li {
+    position: relative;
+    width: 200px;
+    list-style-type: none;
+    display: inline-block;
+    background-color: #eee;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 4px;
+    border-radius: 4px;
+    vertical-align: top;
+}
+.dust-content .draglist:hover,
+.dust-content .draglist:visited{
+    border: 1px dashed #ccc;
+}
+.dust-content .draglist h4{
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    position: absolute;
+    /*top: -11px;*/
+    /*left: 7px;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 22px;
+}
+
+.dust-content .draglist span{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    display: none;
+}
+.dust-content .draglist span.wm-remove {
+    cursor: pointer;
+}
+
+.dust-content li:hover >span{
+    display: block;
+}
+/*补上的内容-------*/
+.dustbin li,
+.dustbin1 li,
+.dustbin2 li {
+	position: relative;
+	width: 200px;
+	list-style-type: none;
+	display: inline-block;
+	background-color: #eee;
+	height: 38px;
+	line-height: 38px;
+	margin-top: 4px;
+	border-radius: 4px;
+}
+
+.dustbin li:hover,
+.dustbin1 li:hover,
+.dustbin2 li:hover {
+    border: 1px solid rgba(140, 229, 255, 0.87);
+}
+.dustbin .draglist h4,
+.dustbin1 .draglist h4 {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    position: absolute;
+    top: -11px;
+    left: 7px;
+}
+
+.dustbin .draglist span,
+.dustbin1 .draglist span {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	display: none;
+}
+
+.dustbin li:hover >span,
+.dustbin1 li:hover >span{
+	display: block;
+}
+
+.wrapper {
+	display: inline-block;
+	/*width: 257px;*/
+	padding-bottom: 4px;
+    white-space: nowrap;
+}
+
+.content-list {
+    display:inline-block;
+    width: 83%;
+    margin-left: 17%;
+}
+
+.content-list .data-list {
+    display: inline-block;
+    /*width: 223px;*/
+    /*width: 20%;*/
+    vertical-align: top;
+    overflow: auto;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.data-list ul {
+    padding: 10px;
+}
+
+.data-list ul li {
+    min-height: 28px;
+    outline: none;
+    white-space: nowrap;
+    min-width: 200px;
+    max-width: 450px;
+}
+
+.data-list ul li span span{
+    color: #777;
+}
+
+.data-list ul li a{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.data-list ul li span{
+    color: #53a4f5;
+    outline: none;
+}
+
+.data-table {
+    display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+    width: 80%;
+}
+
+.data-list ul li.eventPropertiesLi {
+    border: 1px solid #ccc;
+}
+
+.data-list ul li .sub-list {
+    display: block;
+    border-top: 1px solid #ccc;
+}
+
+.dustbin1 .box {
+	/*height: 35px;*/
+    display: block!important;
+}
+
+.dustbin1 .box li {
+	vertical-align: top;
+}
+
+
+
+
+
+

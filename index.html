@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+	<meta charset="utf-8">
+	<title>demo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="defineview.css"/>
+</head>
+<body>
+    <div ng-controller="democtrl">
+    	<ul class="dragbox">
+			<li class="draglist" title="拖拽我"  ng-repeat="key in keys"  ng-model="key" id="{{key.name}}" drag>
+				<h4 id="{{key.id}}">{{key.name}}</h4>
+			</li>
+		</ul>
+
+		<div class="dust-content" id="dust-main" drop> 
+		 </div> 
+    </div>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script src="service/treetemplate.js"></script>
+</body>
+</html>
